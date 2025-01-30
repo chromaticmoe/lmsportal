@@ -1,8 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **LMS Portal App for a Micro-Frontend & Microservices Project**  
 
-## Getting Started
+This project is a **multi-app system** built with a **micro-frontend architecture** and a **microservices backend**, using **MSAL (Microsoft Authentication Library)** for authentication. It leverages modern web technologies, ensuring a modular, scalable, and efficient approach to web application development.
 
-First, run the development server:
+## **Tech Stack**  
+
+- **[Next.js](https://nextjs.org)**
+- **[Tailwind CSS](https://tailwindcss.com/)** 
+- **[shadcn/ui](https://ui.shadcn.com/)**
+
+---
+
+## **Getting Started**  
+
+To start the development server, run:  
 
 ```bash
 npm run dev
@@ -14,23 +24,27 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:4200](http://localhost:4200) in your browser to view the app.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can modify the main page by editing `app/page.tsx`. Changes will be applied automatically.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## **Authentication**  
 
-To learn more about Next.js, take a look at the following resources:
+This project uses **Microsoft Authentication Library (MSAL)** to enable secure login via **Microsoft Entra ID**. Ensure your environment variables are configured correctly for authentication to work properly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **Learn More**  
 
-## Deploy on Vercel
+- [Next.js Documentation](https://nextjs.org/docs) – Learn about Next.js features and API.  
+- [Tailwind CSS](https://tailwindcss.com/docs) – Styling utilities and customization.  
+- [shadcn/ui](https://ui.shadcn.com/) – Component library for building modern UI.  
+- [Microsoft Authentication Library (MSAL)](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-overview) – Secure authentication with Microsoft.  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## **Deployment**  
+
+WIP
