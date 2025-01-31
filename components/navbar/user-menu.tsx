@@ -23,14 +23,18 @@ const UserMenu = () => {
                     <p>johndoe@mail.com</p>
                     <div className="my-2 border-b-4 w-full" />
                     <div className="flex flex-col w-full gap-1">
-                        <DropdownMenuItem className="cursor-pointer h-12 flex flex-row items-center justify-between focus:bg-foreground">
-                            <Link href='/account-settings' className="text-[16px]">Account Settings</Link>
-                            <ChevronRight />
-                        </DropdownMenuItem>
-                        <DropdownMenuItem className="cursor-pointer h-12 flex flex-row items-center justify-between focus:bg-foreground" onClick={() => console.log('Account Settings')}>
-                            <p className="text-[16px]">Notifications</p>
-                            <ChevronRight />
-                        </DropdownMenuItem>
+                        <Link href='/account-settings'>
+                            <DropdownMenuItem className="cursor-pointer h-12 flex flex-row items-center justify-between focus:bg-foreground">
+                                <p className="text-[16px]">Account Settings</p>
+                                <ChevronRight />
+                            </DropdownMenuItem>
+                        </Link>
+                        <Link href='/notifications'>
+                            <DropdownMenuItem className="cursor-pointer h-12 flex flex-row items-center justify-between focus:bg-foreground" onClick={() => console.log('Account Settings')}>
+                                <p className="text-[16px]">Notifications</p>
+                                <ChevronRight />
+                            </DropdownMenuItem>
+                        </Link>
                     </div>
                     <div className="my-2 border-b-4 w-full" />
                     <Button className="w-full h-12 bg-primary" >Logout</Button>
