@@ -1,4 +1,4 @@
-import { Moon, Sun, User } from "lucide-react";
+import { ChevronRight, Moon, Sun, User } from "lucide-react";
 import { Button } from "../ui/button";
 import { 
     DropdownMenu, 
@@ -7,6 +7,7 @@ import {
     DropdownMenuTrigger 
 } from "../ui/dropdown-menu";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const UserMenu = () => {
     const { theme, setTheme } = useTheme()
@@ -16,15 +17,24 @@ const UserMenu = () => {
                 <User className="cursor-pointer p-2 rounded-full border-2 bg-foreground transition hover:bg-background" size={45} color={theme === 'dark' ? '#CCCCCC' : '#333333'} />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme("light")}>
-                    Light
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
-                    Dark
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("system")}>
-                    System
-                </DropdownMenuItem>
+                <div className="flex flex-col items-center gap-1 p-4 w-[300px]">
+                    <User className="p-2 rounded-full border-2" size={60} color={theme === 'dark' ? '#CCCCCC' : '#333333'} />
+                    <p className="font-[550] text-[20px]" >John Doe</p>
+                    <p>johndoe@mail.com</p>
+                    <div className="my-2 border-b-4 w-full" />
+                    <div className="flex flex-col w-full gap-1">
+                        <DropdownMenuItem className="cursor-pointer h-12 flex flex-row items-center justify-between focus:bg-foreground">
+                            <Link href='/account-settings' className="text-[16px]">Account Settings</Link>
+                            <ChevronRight />
+                        </DropdownMenuItem>
+                        <DropdownMenuItem className="cursor-pointer h-12 flex flex-row items-center justify-between focus:bg-foreground" onClick={() => console.log('Account Settings')}>
+                            <p className="text-[16px]">Notifications</p>
+                            <ChevronRight />
+                        </DropdownMenuItem>
+                    </div>
+                    <div className="my-2 border-b-4 w-full" />
+                    <Button className="w-full h-12 bg-primary" >Logout</Button>
+                </div>
             </DropdownMenuContent>
         </DropdownMenu>
     );
