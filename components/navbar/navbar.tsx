@@ -1,5 +1,5 @@
 import { ThemeToggle } from "./theme-toggle";
-import { LayoutGrid, User } from "lucide-react"
+import { Bell, LayoutGrid } from "lucide-react"
 import Logo from "../../public/logo.svg";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
@@ -27,7 +27,8 @@ const Navbar = () => {
                     </div>
                     <p className="font-bold text-[20px]">{routeName}</p>
                 </div>
-                <div className="ml-auto flex items-center space-x-4">
+                <div className="ml-auto flex items-center space-x-6">
+                    <Bell size={20}/>
                     <ThemeToggle />
                     <UserMenu />
                     {/* <User className="p-2 rounded-full border-2" size={40} color={theme === 'dark' ? '#CCCCCC' : '#333333'} /> */}
